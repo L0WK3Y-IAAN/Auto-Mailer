@@ -46,7 +46,7 @@ def send_email():
     
     
     f = open("logs.txt", "a")
-    f.write("Check in sent for: " + currentDate)
+    f.write("Check in sent for: " + currentDate + "\n\n")
     f.close()
     
     txt = client.messages.create(
