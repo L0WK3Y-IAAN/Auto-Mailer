@@ -5,7 +5,7 @@ import schedule
 import subprocess
 import time
 from twilio.rest import Client
-#Add Twilio text notification when email is sent
+
 
 #Twilio Variables
 account_sid = "ACb6ff1dc6393fcd5d034c40b90f78d466"
@@ -26,10 +26,10 @@ print(date.strftime("%B %d %Y, %I:%M:%S%p EST"))
 
 
 
-# subprocess.call(['cls'],shell=True)
+subprocess.call(['cls'],shell=True)
 print('Waiting for execution time...')
 
-def send_email():
+def send_email(): #Mailing function
 
     subprocess.call(['cls'],shell=True)
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -44,19 +44,29 @@ def send_email():
     subprocess.call(['cls'],shell=True)
     print('Waiting for execution time...')
     
-    
+    #Creates log of when check-in was sent.
     f = open("logs.txt", "a")
     f.write("Check in sent for: " + currentDate + "\n\n")
     f.close()
     
+    #Sends a text notification when check-in was sent.
     txt = client.messages.create(
     to="+12407132509", 
     from_="+12052559796",
     body="MorningStar check in sent for: " + currentDate + "\n\n Recipients: \n" + recipients)
+    print(txt)
+
+def off_day():
+    print("Today is Sunday, enjoy your off day! :)")
 
 
-
-schedule.every().day.at("00:00").do(send_email)
+schedule.every().monday.at("00:00").do(send_email)
+schedule.every().tuesday.at("00:00").do(send_email)
+schedule.every().wednesday.at("00:00").do(send_email)
+schedule.every().thursday.at("00:00").do(send_email)
+schedule.every().friday.at("00:00").do(send_email)
+schedule.every().saturday.at("00:00").do(send_email)
+schedule.every().sunday.do(off_day)
 
 while True:
     schedule.run_pending()
