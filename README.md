@@ -8,11 +8,15 @@ I will change the variables to take user-input in a future release, or you can c
 Once you've set your variables to your liking, just throw it onto a server, run it and you're good to go. :)
 
 
-PIP packages required:
+Required PIP packages to be installed:
 
 Schedule: https://pypi.org/project/schedule/
 
-
 Twilio: https://pypi.org/project/twilio/
+
+or use
+
+"pip install -r requirements.txt" (Paste in CLI)
+
 
 Enjoy :)
