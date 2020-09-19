@@ -1,8 +1,4 @@
-AUTOMAILER by... 
- _       __   __      __ _  __   ____ __   __
-| |     /  \  \ \    / /| |/ /  |__ / \ \ / /
-| |__  | () |  \ \/\/ / |   <    |_ \  \   / 
-|____|  \__/    \_/\_/  |_|\_\  |___/   |_| 
+AUTOMAILER by: L0WK3Y
 
 [+] Are you annoyed with the tedious task of sending repetative daily emails? Use Automailer!
  
