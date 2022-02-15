@@ -108,7 +108,7 @@ schedule.every().wednesday.at("00:00").do(send_email)
 schedule.every().thursday.at("00:00").do(send_email)
 schedule.every().friday.at("00:00").do(send_email)
 schedule.every().saturday.at("00:00").do(send_email)
-schedule.every().sunday.do(off_day)
+schedule.every().sunday.do(off_day())
 
 
 
